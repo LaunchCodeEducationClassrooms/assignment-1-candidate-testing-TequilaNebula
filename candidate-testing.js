@@ -18,7 +18,7 @@ let questions = [
   ];
 let correctAnswers = [
   "Sally Ride", 
-  "true", 
+  "True", 
   "40", 
   "Trajectory", 
   "3"
@@ -37,7 +37,7 @@ function askQuestion() {
 
   for (let i = 0; i < questions.length; i++){
     candidateAnswers[i] = input.question((i+1) + ') ' + questions[i]);
-    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+    if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
     console.log(`Your Answer: ${candidateAnswers[i]}\nAnswer Correct!\n`)
   } else {
     console.log(`Your Answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}\n`)
@@ -63,7 +63,7 @@ function gradeQuiz(candidateAnswers) {
   let j = 0;
   
   for (let i = 0; i < correctAnswers.length; i ++) {
-    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+    if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
     j ++;
   } else {
     j += 0;
